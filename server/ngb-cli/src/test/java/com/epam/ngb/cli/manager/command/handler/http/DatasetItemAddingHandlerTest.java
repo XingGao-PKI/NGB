@@ -112,14 +112,6 @@ public class DatasetItemAddingHandlerTest extends AbstractCliTest {
         Assert.assertEquals(RUN_STATUS_OK, handler.runCommand());
     }
 
-    @Test
-    public void testAddFilesWithRegistration() {
-        DatasetItemAddingHandler handler = getDatasetItemAddingHandler();
-        handler.parseAndVerifyArguments(Arrays.asList(DATASET_NAME, VCF_NAME, PATH_TO_BAM + "?" + PATH_TO_BAI),
-                new ApplicationOptions());
-        Assert.assertEquals(RUN_STATUS_OK, handler.runCommand());
-    }
-
     private DatasetItemAddingHandler getDatasetItemAddingHandler() {
         DatasetItemAddingHandler handler = new DatasetItemAddingHandler();
         handler.setServerParameters(serverParameters);

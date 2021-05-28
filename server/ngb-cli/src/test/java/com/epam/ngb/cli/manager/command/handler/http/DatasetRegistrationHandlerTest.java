@@ -165,15 +165,6 @@ public class DatasetRegistrationHandlerTest extends AbstractCliTest {
     }
 
     @Test
-    public void testDatasetRegistrationWithFileRegistration() {
-        DatasetRegistrationHandler handler = getDatasetRegistrationHandler();
-        handler.parseAndVerifyArguments(Arrays.asList(String.valueOf(REF_BIO_ID),
-                DATASET_WITH_BAM_NAME, VCF_NAME, PATH_TO_BAM + "?" + PATH_TO_BAI),
-                new ApplicationOptions());
-        assertEquals(RUN_STATUS_OK, handler.runCommand());
-    }
-
-    @Test
     public void testDatasetRegistrationWithParentName() {
         DatasetRegistrationHandler handler = getDatasetRegistrationHandler();
         ApplicationOptions applicationOptions = new ApplicationOptions();
